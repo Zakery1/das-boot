@@ -19,7 +19,7 @@ public class ShipwreckController {
     }
 
     @RequestMapping(value = "shipwrecks", method = RequestMethod.POST)
-    public Shipwreck create(@@RequestBody Shipwreck shipwreck) {
+    public Shipwreck create(@RequestBody Shipwreck shipwreck) {
         return ShipwreckStub.create(shipwreck);
     }
 
@@ -28,8 +28,8 @@ public class ShipwreckController {
         return ShipwreckStub.get(id);
     }
 
-    @RequestMapping(value = "shipwrecks/{id}", method RequestMethod.PUT)
-    public Shipwreck update(PathVariable Long id, @RequestBody Shipwreck shipwreck) {
+    @RequestMapping(value = "shipwrecks/{id}", method = RequestMethod.PUT)
+    public Shipwreck update(@PathVariable Long id, @RequestBody Shipwreck shipwreck) {
         return ShipwreckStub.update(id, shipwreck);
     }
 
